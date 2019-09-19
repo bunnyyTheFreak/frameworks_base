@@ -4736,6 +4736,23 @@ public final class Settings {
         public static final Validator VOLUME_LINK_NOTIFICATION_VALIDATOR = BOOLEAN_VALIDATOR;
 
         /**
+         * Number of qs columns on landscape orientation
+         * @hide
+         */
+        public static final String QS_LAYOUT_COLUMNS_LANDSCAPE = "qs_layout_columns_landscape";
+         /** @hide */
+        private static final Validator QS_LAYOUT_COLUMNS_LANDSCAPE_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
+
+         /**
+         * @hide
+         */
+        public static final String QS_LAYOUT_COLUMNS = "qs_layout_columns";
+         /** @hide */
+        private static final Validator QS_LAYOUT_COLUMNS_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -4807,6 +4824,8 @@ public final class Settings {
             DISPLAY_COLOR_MODE,
             ALARM_ALERT,
             NOTIFICATION_LIGHT_PULSE,
+            QS_LAYOUT_COLUMNS_LANDSCAPE,
+            QS_LAYOUT_COLUMNS,
         };
 
         /**
@@ -4949,7 +4968,9 @@ public final class Settings {
             PRIVATE_SETTINGS.add(CAMERA_LAUNCH);
             PRIVATE_SETTINGS.add(REFRESH_RATE_SETTING);
             PRIVATE_SETTINGS.add(NAVIGATION_BAR_MODE_OVERLAY);
-            PRIVATE_SETTINGS.add(VOLUME_LINK_NOTIFICATION);
+            PRIVATE_SETTINGS.add(VOLUME_LINK_NOTIFICATION);_CONTROL);
+            PRIVATE_SETTINGS.add(QS_LAYOUT_COLUMNS_LANDSCAPE);
+            PRIVATE_SETTINGS.add(QS_LAYOUT_COLUMNS);
         }
 
         /**
@@ -5067,6 +5088,9 @@ public final class Settings {
             VALIDATORS.put(REFRESH_RATE_SETTING, REFRESH_RATE_SETTING_VALIDATOR);
             VALIDATORS.put(NAVIGATION_BAR_MODE_OVERLAY, NAVIGATION_BAR_MODE_OVERLAY_VALIDATOR);
             VALIDATORS.put(VOLUME_LINK_NOTIFICATION, VOLUME_LINK_NOTIFICATION_VALIDATOR);
+            VALIDATORS.put(QS_LAYOUT_COLUMNS_LANDSCAPE,
+                    QS_LAYOUT_COLUMNS_LANDSCAPE_VALIDATOR);
+            VALIDATORS.put(QS_LAYOUT_COLUMNS, QS_LAYOUT_COLUMNS_VALIDATOR);
         }
 
         /**
