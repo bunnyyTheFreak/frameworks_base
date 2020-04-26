@@ -38,4 +38,6 @@
 
     <!-- Alerting notification header label -->
     <string name="notification_section_header_alerting">Alerting notifications</string>
+
+    <string name="quick_settings_sound_search">Sound search</string>
 </resources>
