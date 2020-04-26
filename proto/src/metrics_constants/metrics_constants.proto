@@ -7437,5 +7437,9 @@ message MetricsEvent {
     PANEL_MOBILE_DATA = 2002;
     // Panel for Bluetooth
     PANEL_BLUETOOTH = 2003;
+
+    // FreakyOS Metrics
+    FREAKY = 3210;
+    FREAKY_SETTINGS = 7654;
   }
 }
